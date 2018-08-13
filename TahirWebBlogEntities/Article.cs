@@ -6,7 +6,7 @@ namespace TahirWebBlogEntities
     {
         //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArticleId { get; set; }
-        public string Title { get; set; }
+        public string ArticleTitle { get; set; }
         //public string ArticleBody { get; set; }
         //public string BelongsTo { get; set; }
         //public int Votes { get; set; }

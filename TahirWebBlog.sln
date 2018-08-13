@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahirWebBlog", "TahirWebBlo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahirWebBlogEntities", "TahirWebBlogEntities\TahirWebBlogEntities.csproj", "{3DECD689-04A6-445B-8314-FD0F8BD5A424}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahirWebBlogDbContext", "TahirWebBlogDbContext\TahirWebBlogDbContext.csproj", "{6D191EC6-F649-4A35-B2A0-B82011107BBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D191EC6-F649-4A35-B2A0-B82011107BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D191EC6-F649-4A35-B2A0-B82011107BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D191EC6-F649-4A35-B2A0-B82011107BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D191EC6-F649-4A35-B2A0-B82011107BBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

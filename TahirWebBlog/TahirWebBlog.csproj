@@ -16,4 +16,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TahirWebBlogDbContext\TahirWebBlogDbContext.csproj" />
+    <ProjectReference Include="..\TahirWebBlogEntities\TahirWebBlogEntities.csproj" />
+  </ItemGroup>
+
 </Project>

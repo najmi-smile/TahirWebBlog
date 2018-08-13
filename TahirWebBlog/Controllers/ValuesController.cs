@@ -3,17 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TahirWebBlogDbContext;
+using TahirWebBlogEntities;
 
 namespace TahirWebBlog.Controllers
 {
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        private Database db;
+        public ValuesController(Database _db)
+        {
+            db = _db;
+        }
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Article> Get()
         {
-            return new string[] { "value1", "value2" };
+            List<Article> articles = db.Articles.ToList();
+            return articles;
         }
 
         // GET api/values/5
