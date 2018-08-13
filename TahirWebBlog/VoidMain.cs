@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace TahirWebBlog
 {
-    public class Program
+    public class VoidMain
     {
         public static void Main(string[] args)
         {

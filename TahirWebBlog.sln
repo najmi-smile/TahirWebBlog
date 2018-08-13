@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahirWebBlog", "TahirWebBlog\TahirWebBlog.csproj", "{F8C6B0CD-B7CD-4805-8EBC-C9431A86182F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TahirWebBlogEntities", "TahirWebBlogEntities\TahirWebBlogEntities.csproj", "{3DECD689-04A6-445B-8314-FD0F8BD5A424}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F8C6B0CD-B7CD-4805-8EBC-C9431A86182F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8C6B0CD-B7CD-4805-8EBC-C9431A86182F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8C6B0CD-B7CD-4805-8EBC-C9431A86182F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DECD689-04A6-445B-8314-FD0F8BD5A424}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
