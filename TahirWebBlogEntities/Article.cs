@@ -4,6 +4,7 @@ namespace TahirWebBlogEntities
 {
     public class Article
     {
+        //  TODO! Time Stamp
         //[Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ArticleId { get; set; }
         public string ArticleTitle { get; set; }

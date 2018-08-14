@@ -36,7 +36,20 @@ namespace TahirWebBlog
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseMvc(routes =>
+            {
+                //  Below vode is for resolving the area controller naming conflict
+                //var namespaces = new[] { typeof(PostsController).Namespace };
+                //routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+                //routes.MapRoute("Login", "login", new { Controller = "Auth", Action = "Login" }, namespaces);
+                //routes.MapRoute("Logout", "logout", new { Controller = "Auth", Action = "Logout" }, namespaces);
+                //routes.MapRoute("Home", "", new { Controller = "Posts", Action = "Index" }, namespaces);
 
+                routes.MapRoute(
+                  name: "areas",
+                  template: "{area:exists}/{controller=Users}/{action=Index}/{id?}"
+                );
+            });
             app.UseMvc();
         }
     }

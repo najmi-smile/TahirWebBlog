@@ -6,6 +6,7 @@ namespace TahirWebBlogEntities
 {
     class Post
     {
+        //  TODO! Time Stamp
         public int PostId { get; set; }
         public string PostTitle { get; set; }
         public string PostBody { get; set; }
