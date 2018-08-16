@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using TahirWebBlog.Models;
 using TahirWebBlogDbContext;
 using TahirWebBlogEntities;
+using TahirWebBlog.Models;
+using System.Linq;
+
 
 namespace TahirWebBlog.Controllers
 {

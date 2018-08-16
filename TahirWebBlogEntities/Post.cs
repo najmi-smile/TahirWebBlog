@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TahirWebBlogEntities
 {
-    class Post
+    public class Post
     {
         //  TODO! Time Stamp
         public int PostId { get; set; }
