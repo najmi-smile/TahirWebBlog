@@ -24,7 +24,7 @@ namespace TahirWebBlog
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Database>(options => options.UseSqlServer("Server=(localdb)\\db;Database=TahirWebBlog;User=guest; Password=guest"));
+            services.AddDbContext<AppDatabase>(options => options.UseSqlServer("Server=(localdb)\\db;Database=TahirWebBlog;User=guest; Password=guest"));
 
             services.AddMvc();
         }

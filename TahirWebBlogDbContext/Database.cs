@@ -4,11 +4,11 @@ using TahirWebBlogEntities;
 
 namespace TahirWebBlogDbContext
 {
-    public class Database : DbContext
+    public class AppDatabase : DbContext
     {
         public DbSet<Article> Articles { get; set; }
         public DbSet<User> Users { get; set; }
 
-        public Database(DbContextOptions options) : base(options) { }
+        public AppDatabase(DbContextOptions options) : base(options) { }
     }
 }

@@ -15,9 +15,9 @@ namespace TahirWebBlog.Areas.Admin.Controllers
     [Route("api/admin/users")]
     public class UsersController : Controller
     {
-        private Database Db { get; set; }
+        private AppDatabase Db { get; set; }
 
-        public UsersController(Database _db)
+        public UsersController(AppDatabase _db)
         {
             Db = _db;
         }
