@@ -8,7 +8,7 @@ namespace TahirWebBlog.Models
 {
     public class PostModel
     {
-        public Article Article { get; set; }
+        public List<Article> Articles { get; set; }
         public string Image { get; set; }
     }
 }

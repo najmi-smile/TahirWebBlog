@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace TahirWebBlog.Models
 {
-    public class TagModel
+    public class CommentModel
     {
-        public string TagTitle { get; set; }
+        public string CommentBody { get; set; }
     }
 }

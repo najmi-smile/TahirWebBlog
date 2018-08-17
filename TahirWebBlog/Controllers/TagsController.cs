@@ -14,6 +14,7 @@ namespace TahirWebBlog.Controllers
     {
         private AppDatabase Db { get; set; }
         public TagsController(AppDatabase db) { Db = db; }
+        // TODO! Manage exceptions, AppDatabase, query to find single tag
 
         [HttpGet]
         [Route("")]
@@ -22,21 +23,23 @@ namespace TahirWebBlog.Controllers
             var tags = Db.Tags.ToList();
             return tags;
         }
-
         [HttpGet]
         [Route("{id}")]
         public Tag GetTag(int id)
         {
-            var tag = Db.Tags.Where(t => t.TagId == id).SingleOrDefault();
-            return new Tag()
+            try
             {
-                TagId = tag.TagId,
-                TagTitle = tag.TagTitle
-            };
+                var tag = Db.Tags.Where(t => t.TagId == id).SingleOrDefault();
+                return new Tag()
+                {
+                    TagId = tag.TagId,
+                    TagTitle = tag.TagTitle
+                };
+            }
+            catch(Exception ex) { throw new Exception(ex.Message); }
         }
-
         [HttpPost]
-        [Route("new_tag")]
+        [Route("")]
         public bool SaveTag(TagModel tag)
         {
             if (Db.Tags.Any(t => t.TagTitle == tag.TagTitle))
@@ -61,15 +64,41 @@ namespace TahirWebBlog.Controllers
             return true;
         }
         [HttpPut]
-        [Route("update_tag")]
-        public bool UpdateTag(TagModel tag)
+        [Route("{id}")]
+        public bool UpdateTag(int id, TagModel tag)
         {
+            if (!ModelState.IsValid)
+                return false;
+
+            if (Db.Tags.Any(t => t.TagId == id && t.TagTitle != tag.TagTitle))
+            {
+                try
+                {
+                    var newTag = new Tag()
+                    {       
+                        TagId = id,
+                        TagTitle = tag.TagTitle
+                    };
+                    Db.Tags.Update(newTag);
+                    Db.SaveChanges();
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+            }   
             return true;
         }
         [HttpDelete]
         [Route("{id}")]
         public bool DeleteTag(int id)
         {
+            try
+            {
+                Db.Tags.Remove(Db.Tags.Where(t => t.TagId == id).SingleOrDefault());
+                Db.SaveChanges();
+            }
+            catch(Exception ex) { throw new Exception(ex.Message); }
             return true;
         }
     }

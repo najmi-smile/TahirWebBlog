@@ -35,20 +35,20 @@ namespace TahirWebBlog.Controllers
             };
         }
         [HttpPost]
-        [Route("new")]
+        [Route("")]
         public bool SavePost(PostModel post)
         {
             return true;
         }
 
         [HttpPut]
-        [Route("update_post")]
+        [Route("{id}")]
         public bool UpDatePost(PostModel post)
         { 
             return true;
         }
         [HttpDelete]
-        [Route("delete_post")]
+        [Route("{id}")]
         public bool DeletePost(int id)
         {
             return true;

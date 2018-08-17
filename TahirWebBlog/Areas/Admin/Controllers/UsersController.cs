@@ -24,20 +24,20 @@ namespace TahirWebBlog.Areas.Admin.Controllers
 
         [HttpGet]
         [Route ("")]
-        public string Get()
+        public string GetUsers()
         {
             return "Admin/User";
         }
         [HttpGet]
         [Route("{id}")]
-        public string Get(int id)
+        public string GetUser(int id)
         {
             return "User by id";
         }
 
         [HttpPost]
-        [Route("new")]
-        public bool New(NewUser formUser)
+        [Route("")]
+        public bool SaveUser(NewUser formUser)
         {
             if(Db.Users.Any(u => u.UserName == formUser.UserName))
                 ModelState.AddModelError("UserName", "Username must be unique!");
@@ -58,8 +58,8 @@ namespace TahirWebBlog.Areas.Admin.Controllers
         }
 
         [HttpPut]
-        [Route("edit")]
-        public bool Edit(int id, EditUser formUser)
+        [Route("{id}")]
+        public bool UpdateUser(int id, EditUser formUser)
         {
             return true;
         }
@@ -72,8 +72,8 @@ namespace TahirWebBlog.Areas.Admin.Controllers
         }
 
         [HttpDelete]
-        [Route("delete")]
-        public bool Delete(int id)
+        [Route("{id}")]
+        public bool DeleteUser(int id)
         {
             return true;
         }
