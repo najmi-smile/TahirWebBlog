@@ -1,12 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using static TahirWebBlog.Areas.Admin.Models.UserModel;
+using Microsoft.AspNetCore.Mvc;
 using TahirWebBlogDbContext;
-
-using System.Collections.Generic;
-using Microsoft.AspNetCore.Http;
-using System.Threading.Tasks;
-using System.Linq;
-using System;
-using static TahirWebBlog.Areas.Admin.Models.UserModel;
 using TahirWebBlogEntities;
 
 namespace TahirWebBlog.Areas.Admin.Controllers
@@ -39,8 +33,9 @@ namespace TahirWebBlog.Areas.Admin.Controllers
         [Route("")]
         public bool SaveUser(NewUser formUser)
         {
-            if(Db.Users.Any(u => u.UserName == formUser.UserName))
-                ModelState.AddModelError("UserName", "Username must be unique!");
+            //var u = Db.Users.Where(u => u.UserName == formUser.UserName);
+            //if (u != null)
+            //    ModelState.AddModelError("UserName", "Username must be unique!");
             
             if(!ModelState.IsValid)
                 return false;

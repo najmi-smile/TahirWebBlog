@@ -1,5 +1,4 @@
-﻿using System;
-
+﻿
 namespace TahirWebBlogEntities
 {
     public class Article
